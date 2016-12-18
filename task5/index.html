@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Task5</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<h1>PreventDefault()</h1>
+		<div class="cont1">
+			<img src="https://itchief.ru/assets/images/tickets/2015.07/javascript-sample-event-prevent-default.png" alt="">
+			<p>Prevent default: Якщо цей метод викликається, дія за замовчуванням події не спрацьовуватиме. Наприклад при кліку на ссилці, вона не буде переходити на посилання</p>	
+		</div>
+		<hr />
+		<h1>StopPropagation()</h1>
+		<div class="cont2">
+			<img src="https://i.stack.imgur.com/efAzj.jpg" alt="">
+			<p>Функція event.stopPropagation() дозволяє виконати подію на поточному елементі, але блокує виконання функції на всіх батьківських елементах.Метод stopPropagation (),  зупиняє спливання (bubbling) будь-якої події до батьківських елементів.</p>
+		</div>
+		<hr />
+		<p>Для прикладу подивіться на два блоки. Перший з них(лівий) використовує функцію preventDefault().Для правого виконується функція із застосовується event.stopPropagation(). Якщо клікнути по лівому блоці, то функція виконається для поточно елемента(на котрому клікнули) і ще по одному разу для кожного батьківського. У випадку з правим блоком, то функція виконається тільки один раз - для поточного елемента.</p>
+		<h3>Відмінності - перша блокує стандартну дію браузера, друга - виконання події для батьківських елементів.</h3>
+		<div class="boxes">
+			<div class="one">
+				<div id="box1" class="box">
+		  			<div id="box2" class="box">
+		    			<div id="box3" class="box">
+		    
+		    			</div>
+		  			</div>
+				</div>
+			</div>
+			<div class="two">
+				<div id="box11" class="box">
+		  			<div id="box22" class="box">
+		    			<div id="box33" class="box">
+		    
+		    			</div>
+		  			</div>
+				</div>
+			</div>
+		</div>
+		<script src ="script.js"></script>
+	</body>
+</html>
