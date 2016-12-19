@@ -51,11 +51,12 @@ function validateForm() {
     var inputElements = document.forms[0].childNodes;
     // validate age
     var age = inputElements[0].value;
-    var pattern = /([0-9])/g;
+    //var pattern = /([0-9])/g;
+
     //if -> alert
-    if (age.search(pattern) !== 0) {
+    if (isNaN(age) || age < 1) {
         valid = false;
-        alert('Sorry, you enter incorrect age! Please try again.');        
+        alert('Sorry, you enter incorrect age! Please try again.');      
     }
     // validate user name
     var rightName = 'user_';
