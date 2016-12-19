@@ -54,7 +54,7 @@ function validateForm() {
     //var pattern = /([0-9])/g;
 
     //if -> alert
-    if (isNaN(age) || age < 1) {
+    if (isNaN(age) || age < 1 || age > 1000) {
         valid = false;
         alert('Sorry, you enter incorrect age! Please try again.');      
     }
